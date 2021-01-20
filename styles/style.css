@@ -1,0 +1,298 @@
+     *,
+     *::after,
+     *::before {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+     
+      :root {
+         --color-white: hsl(0, 0%, 100%);
+         --color-black: hsl(0, 0%, 0%);
+         --color-dark-gray: hsl(0, 0%, 55%);
+         --color-very-dark-gray: hsl(0, 0%, 41%);
+         --font-size: 15px;
+         --first-font: 'Alata', sans-serif;
+         --second-font: 'Josefin Sans', sans-serif;
+     }
+     
+     html {
+         height: 100vh;
+         font-family: var(--first-font);
+         font-size: 100%;
+     }
+     
+     .first-section {
+         display: flex;
+         justify-content: center;
+         background: url('../images/desktop/image-hero.jpg');
+         background-size: cover;
+         background-repeat: no-repeat;
+     }
+     
+     .black-overlay {
+         width: 100%;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         background-color: rgba(0, 0, 0, .5);
+     }
+     
+     .container {
+         width: 77vw;
+     }
+     
+     .first-section .container {
+         margin-top: 5%;
+         margin-bottom: 10%;
+     }
+     
+     .header {
+         color: var(--color-white);
+         float: left;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         font-size: .85rem;
+     }
+     
+     .header img {
+         width: 90%;
+     }
+     
+     .navbar ul {
+         list-style: none;
+     }
+     
+     .navbar ul li {
+         float: left;
+         margin-left: 1.75rem;
+         cursor: pointer;
+     }
+     
+     .caption {
+         color: var(--color-white);
+         font-size: 2.6rem;
+         margin-top: 7rem;
+     }
+     
+     .caption h1 {
+         border: 2px solid #fff;
+         width: fit-content;
+         padding: 2.5rem 5rem 1.5rem 2.5rem;
+         letter-spacing: .1rem;
+         font-weight: 300;
+     }
+     
+     .title {
+         font-family: var(--second-font);
+         text-transform: uppercase;
+     }
+     
+     .second-section {
+         display: flex;
+         justify-content: center;
+         margin-top: 10%;
+     }
+     
+     .box2 {
+         display: flex;
+         justify-content: flex-end;
+         margin-top: -30%;
+     }
+     
+     .vr {
+         width: 39vw;
+         background-color: #fff;
+         padding: 5rem 1rem 5rem 5rem;
+         z-index: 2;
+     }
+     
+     .vr h2 {
+         font-size: 2.6rem;
+         font-weight: 300;
+     }
+     
+     .vr p {
+         padding-top: 2rem;
+         color: var(--color-dark-gray);
+         font-size: .85rem;
+     }
+     
+     .our-creations {
+         margin-top: 5rem;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+     }
+     
+     .our-creations .title {
+         font-size: 2.6rem;
+         font-weight: 300;
+     }
+     
+     .our-creations .see-all-title {
+         font-family: var(--second-font);
+         text-transform: uppercase;
+         font-weight: bold;
+         font-size: .7rem;
+         letter-spacing: .2rem;
+         border: 1px solid rgb(0, 0, 0);
+         padding: .7rem 2rem .7rem 2rem;
+         cursor: pointer;
+     }
+     
+     .our-creations .see-all-title:hover {
+         background-color: rgb(0, 0, 0);
+         color: white;
+         transition-duration: 500ms;
+     }
+     
+     .table {
+         margin-top: 5rem;
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+     }
+     
+     .table img {
+         width: 90%;
+     }
+     
+     .table .img-mobile {
+         display: none;
+     }
+     
+     .table .activity .title {
+         color: #fff;
+         position: relative;
+         top: -20%;
+         left: 10%;
+         font-size: 2rem;
+         font-weight: 300;
+         cursor: pointer;
+     }
+     
+     footer {
+         background-color: black;
+         margin-top: 5rem;
+         display: flex;
+         justify-content: center;
+         color: white;
+         padding: 2rem 0 2rem 0;
+     }
+     
+     footer .container {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+     }
+     
+     .footer-item-start {
+         display: flex;
+         justify-content: start;
+         padding: 1rem 0 1rem 0;
+     }
+     
+     .footer-item-start ul li {
+         float: left;
+         margin-right: 1.75rem;
+         cursor: pointer;
+         list-style: none
+     }
+     
+     .footer-item-end {
+         display: flex;
+         justify-content: flex-end;
+         padding: 1rem 0 1rem 0;
+     }
+     
+     .footer-item-end img {
+         margin-right: 1.75rem;
+     }
+     
+     @media (max-width:1024px) {
+         .box1 {
+             display: flex;
+             justify-content: center;
+         }
+         .box2 {
+             display: flex;
+             justify-content: center;
+             margin: auto;
+         }
+         .vr {
+             width: 50vw;
+             text-align: center;
+             padding: 3rem;
+         }
+         .table {
+             display: grid;
+             grid-template-columns: repeat(1, 1fr);
+         }
+         .table .img-desktop {
+             display: none;
+         }
+         .table .img-mobile {
+             display: block;
+             width: 100%;
+         }
+         .table .activity .title {
+             position: relative;
+             top: -35%;
+             left: 5%;
+         }
+     }
+     
+     @media (max-width:768px) {
+         .navbar {
+             display: none;
+         }
+         .img-vr {
+             width: 100%;
+         }
+         .vr {
+             width: 100vw;
+             text-align: center;
+             padding-top: 0;
+             margin-top: 3rem;
+         }
+         .first-section {
+             display: flex;
+             justify-content: center;
+             background: url('../images/mobile/image-hero.jpg');
+             background-size: cover;
+             background-repeat: no-repeat;
+         }
+         footer .container {
+             display: grid;
+             grid-template-columns: repeat(1, 1fr);
+         }
+         .footer-item-end {
+             display: flex;
+             justify-content: center;
+         }
+         .footer-item-start {
+             display: flex;
+             justify-content: center;
+         }
+         .caption {
+             font-size: 2rem;
+             padding: 0;
+         }
+         .caption h1 {
+             font-size: 1.5rem;
+         }
+         .vr h2 {
+             font-size: 2rem;
+         }
+         .our-creations {
+             margin-top: 5rem;
+             display: flex;
+             justify-content: center;
+         }
+         .our-creations .title {
+             font-size: 2rem;
+         }
+         .see-all {
+             display: none;
+         }
+     }
