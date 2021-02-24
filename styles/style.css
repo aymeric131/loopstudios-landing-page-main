@@ -21,6 +21,25 @@
          font-family: var(--first-font);
          font-size: 100%;
      }
+     /* Toggle Menu */
+     
+     .show {
+         display: block;
+     }
+     
+     .hide {
+         display: none;
+     }
+     
+     #open {
+         color: #ffffff;
+     }
+     
+     #close {
+         color: #ffffff;
+         display: none;
+     }
+     /* End Toggle Menu */
      
      .first-section {
          display: flex;
@@ -208,6 +227,7 @@
      .footer-item-end img {
          margin-right: 1.75rem;
      }
+     /* MEDIAS-QUERIES */
      
      @media (max-width:1024px) {
          .box1 {
@@ -245,6 +265,44 @@
      @media (max-width:768px) {
          .navbar {
              display: none;
+         }
+         .nav-mobile {
+             align-items: center;
+             background-color: black;
+             height: 100vh;
+             width: 100vw;
+             z-index: 99;
+             position: fixed;
+             top: 0;
+             left: 0;
+             display: none;
+         }
+         .nav-mobile img {
+             position: absolute;
+             top: 0;
+             padding-left: 2rem;
+             padding-top: 2rem;
+         }
+         .nav-mobile ul {
+             width: 30vw;
+             height: fit-content;
+         }
+         .nav-mobile ul li {
+             font-family: var(--second-font);
+             font-size: 2.6rem;
+             font-weight: 300;
+             color: #ffffff;
+             text-transform: uppercase;
+             padding: 1rem 0 1rem 0;
+         }
+         .hamburger {
+             display: inline-block !important;
+             z-index: 999;
+             position: absolute;
+             top: 0;
+             right: 0;
+             padding-top: 2rem;
+             padding-right: 2rem;
          }
          .img-vr {
              width: 100%;
@@ -293,6 +351,15 @@
              font-size: 2rem;
          }
          .see-all {
+             display: none;
+         }
+     }
+     
+     @media (min-width:769px) {
+         .nav-mobile {
+             display: none;
+         }
+         .hamburger {
              display: none;
          }
      }
