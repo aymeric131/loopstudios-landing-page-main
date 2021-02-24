@@ -298,11 +298,14 @@
          .hamburger {
              display: inline-block !important;
              z-index: 999;
-             position: fixed;
+             position: absolute;
              top: 0;
              right: 0;
              padding-top: 2rem;
              padding-right: 2rem;
+         }
+         .fa-times {
+             position: fixed;
          }
          .img-vr {
              width: 100%;
@@ -321,7 +324,7 @@
              background-repeat: no-repeat;
          }
          footer .container {
-             width: 100vw;
+             width: 100%;
              display: grid;
              grid-template-columns: repeat(1, 1fr);
          }
