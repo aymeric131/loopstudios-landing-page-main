@@ -298,7 +298,7 @@
          .hamburger {
              display: inline-block !important;
              z-index: 999;
-             position: absolute;
+             position: fixed;
              top: 0;
              right: 0;
              padding-top: 2rem;
@@ -321,16 +321,22 @@
              background-repeat: no-repeat;
          }
          footer .container {
+             width: 100vw;
              display: grid;
              grid-template-columns: repeat(1, 1fr);
          }
          .footer-item-end {
              display: flex;
-             justify-content: center;
+             justify-content: space-around;
+             padding-left: 1.5rem;
          }
          .footer-item-start {
              display: flex;
              justify-content: center;
+         }
+         .footer-item-start ul {
+             display: flex;
+             flex-direction: column;
          }
          .caption {
              font-size: 2rem;
@@ -352,6 +358,9 @@
          }
          .see-all {
              display: none;
+         }
+         .attribution {
+             font-size: .9rem;
          }
      }
      
